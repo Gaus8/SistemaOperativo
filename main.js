@@ -6,9 +6,32 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Ventanas
+let mainWindow;
+let loginWindow;
+
+// Crear la ventana login
+const createLoginWindow = () => {
+  loginWindow = new BrowserWindow({
+    width: 800,
+    height: 600,
+    webPreferences: {
+      nodeIntegration: false,  // Desactivar nodeIntegration por seguridad
+      contextIsolation: true,  
+      preload: path.join(__dirname, 'preload.js')  
+    }
+  });
+
+  loginWindow.loadFile(path.join(__dirname, 'login.html')); // Cargar el archivo HTML para la ventana de login
+
+  loginWindow.on('closed', () => {
+    loginWindow = null;
+  });
+};
+
 // Crear la ventana principal
-const createWindow = () => {
-  const win = new BrowserWindow({
+const createMainWindow = () => {
+  mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
@@ -18,26 +41,41 @@ const createWindow = () => {
     }
   });
 
-  win.loadFile('index.html'); // Cargar archivo local o usar win.loadURL('https://www.google.com')
+
+  mainWindow.loadFile(path.join(__dirname, 'index.html')); // Cargar archivo para la ventana principal
+
+  mainWindow.on('closed', () => {
+  mainWindow = null;
+  });
 };
 
+
+// Al iniciar la aplicación, primero se muestra la ventana de login
 app.whenReady().then(() => {
-  createWindow();
+  createLoginWindow();  // Crear la ventana de login
 
-  ipcMain.on('abrir-url', () => {
-    const url = 'https://www.google.com'; // Aquí puedes poner la URL que desees cargar
-    const ventanaChrome = new BrowserWindow({
-      width: 800,
-      height: 600,
-      webPreferences: {
-        nodeIntegration: false,  // No permitir nodeIntegration
-        contextIsolation: true,  // Aislar el contexto
-      },
-    });
+   // Cuando es exitoso el login, envia a la ventana principal
+   ipcMain.on('login-success', () => {
+    loginWindow.close();  // Cerrar la ventana de login
+    createMainWindow();   // Crear la ventana principal
+  });
 
-    ventanaChrome.loadURL(url);  // Cargar la URL en la nueva ventana de Electron
+
+ipcMain.on('abrir-url', () => {
+  const url = 'https://www.google.com'; // Aquí puedes poner la URL que desees cargar
+  const ventanaChrome = new BrowserWindow({
+    width: 800,
+    height: 600,
+    webPreferences: {
+      nodeIntegration: false,  // No permitir nodeIntegration
+      contextIsolation: true,  // Aislar el contexto
+    },
+  });
+
+  ventanaChrome.loadURL(url);  // Cargar la URL en la nueva ventana de Electron
   });
 });
+
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
