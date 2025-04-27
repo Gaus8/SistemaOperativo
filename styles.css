@@ -13,12 +13,6 @@ body {
   font-weight: 100;
 }
 
-.tagesschrift-regular {
-  font-family: "Tagesschrift", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .barra-tareas {
   display: flex;
   justify-content: space-between;
@@ -54,7 +48,7 @@ body {
   border-radius: 10px 0 0 10px; 
 }
 /*BOTONES*/
-button {
+.btn-barra-iconos{
   width: 40px;
   height:40px;
   background-color: transparent;
@@ -63,9 +57,8 @@ button {
   text-align: center;
 }
 
-button:hover{
+.btn-barra-iconos:hover{
   background-color: rgba(227, 217, 217, 0.904);
-
 }
 
 /*LOGO SOLARIX*/
@@ -79,8 +72,17 @@ button:hover{
 
 #btn-logo{
   width: 100%;
+  height: 40px;
   background-image: url("img/logo.jpg");
   background-size: cover;
+  margin-top: 25px;
+  text-align: center;
+  background-color: transparent;
+  border: none;
+}
+
+#btn-logo:hover{
+  background-color: rgba(227, 217, 217, 0.904);
 }
 
 /*Logos barra de tareas*/
@@ -101,6 +103,10 @@ button:hover{
   border: none;
   margin-top: 25px;
   text-align: center;
+}
+
+.btn-logos-sistema:hover{
+  background-color: rgba(227, 217, 217, 0.904);
 }
 
 #btn-cam {
@@ -284,7 +290,7 @@ button:hover{
  .seccion-aplicaciones-texto p {
   display: block;
   margin-top: 2px;
-  color: rgb(42, 39, 39);
+  color: rgb(0, 0, 0);
  
  }
 
@@ -303,4 +309,40 @@ button:hover{
 .seccion-favoritos{
   width: 40%;
   height: 100%;
+}
+
+.seccion-favoritos img{
+  width: 100%;
+  height: 100%;
+  border-radius: 0% 0% 30% 0%;
+}
+
+.menu-apagar{
+  position: absolute;
+  right: 0;
+  bottom: 55px;
+  width: 200px;
+  height: 100px;
+  background-color: #1d1c1cf7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  display: none;
+}
+
+.btn-menu-apagar{
+  text-align: center;
+  color: #FFF;
+  background-color: transparent;
+  border: none;
+  margin-top: 5px;
+  text-align: center;
+  width: 100%;
+  padding: 5px;
+}
+
+.btn-menu-apagar:hover{
+  background-color: rgba(99, 96, 96, 0.904);
 }
