@@ -93,6 +93,17 @@ app.whenReady().then(() => {
       stdio: "ignore",
     }).unref(); // Ejecuta el archivo sin esperar que termine
   });
+
+  //APAGAR
+ipcMain.on('apagar-sistema', () =>{
+  app.quit();
+})
+//Cerrar-Sesion
+ipcMain.on('cerrar-sesion', () => {
+  mainWindow.close();  
+  createLoginWindow();   
+});
+
 });
 
 
