@@ -42,7 +42,7 @@ const createMainWindow = () => {
     },
   });
 
-  win.loadFile('index.html'); // Cargar archivo local o usar win.loadURL('https://www.google.com')
+  mainWindow.loadFile(path.join(__dirname, 'index.html')); // Abrir ventana principal al login exitoso
 };
 
 app.whenReady().then(() => {
