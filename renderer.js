@@ -5,6 +5,7 @@ actualizarHora();
 const btnChrome = document.getElementById('btn-chrome');
 
 btnChrome.addEventListener('click', () => {
-  window.electron.abrirChromePortable();
-  console.log('Intentando abrir Chrome Portable');
+  // Llamamos a la función de abrir la URL desde el preload.js
+  window.electron.abrirUrl();
+  console.log('Intentando abrir la URL');
 });

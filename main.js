@@ -1,5 +1,4 @@
 import { app, BrowserWindow, ipcMain } from 'electron';
-import { spawn } from 'child_process';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -7,6 +6,7 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+// Crear la ventana principal
 const createWindow = () => {
   const win = new BrowserWindow({
     width: 800,
@@ -18,18 +18,24 @@ const createWindow = () => {
     }
   });
 
-  win.loadFile('index.html');
+  win.loadFile('index.html'); // Cargar archivo local o usar win.loadURL('https://www.google.com')
 };
 
 app.whenReady().then(() => {
   createWindow();
 
-  ipcMain.on('abrir-chrome-portable', () => {
-    const rutaChromePortable = 'C:\\Users\\Asus\\Documents\\SISTEMAS\\GoogleChromePortable\\GoogleChromePortable.exe';
-    spawn(rutaChromePortable, {
-      detached: true,
-      stdio: 'ignore'
-    }).unref();
+  ipcMain.on('abrir-url', () => {
+    const url = 'https://www.google.com'; // Aquí puedes poner la URL que desees cargar
+    const ventanaChrome = new BrowserWindow({
+      width: 800,
+      height: 600,
+      webPreferences: {
+        nodeIntegration: false,  // No permitir nodeIntegration
+        contextIsolation: true,  // Aislar el contexto
+      },
+    });
+
+    ventanaChrome.loadURL(url);  // Cargar la URL en la nueva ventana de Electron
   });
 });
 
