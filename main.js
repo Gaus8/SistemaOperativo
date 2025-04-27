@@ -47,13 +47,6 @@ app.whenReady().then(() => {
     }).unref(); // Ejecuta el archivo sin esperar que termine
   });
 
-  ipcMain.on("abrir-terminal", () => {
-    const rutaTerminal = "C:\\Users\\Asus\\Documents\\SISTEMAS\\CommandPromptPortable\\CommandPromptPortable.exe"; // Ruta al Bloc de Notas Portable
-    spawn(rutaTerminal, {
-      detached: true,
-      stdio: "ignore",
-    }).unref(); // Ejecuta el archivo sin esperar que termine
-  });
 
   ipcMain.on("abrir-terminal", () => {
     const rutaTerminal = "C:\\Users\\Asus\\Documents\\SISTEMAS\\CommandPromptPortable\\CommandPromptPortable.exe"; // Ruta al Bloc de Notas Portable

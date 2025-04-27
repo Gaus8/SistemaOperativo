@@ -1,9 +1,22 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('fonts/Roboto-VariableFont_wdth\,wght.ttf') format('truetype');
+}
+
 body {
   background-image: url("img/fondo1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   color: #FFF;
+  font-family: "Roboto", system-ui;
+  font-weight: 100;
+}
+
+.tagesschrift-regular {
+  font-family: "Tagesschrift", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .barra-tareas {
@@ -40,7 +53,7 @@ body {
   padding: 10px 0;
   border-radius: 10px 0 0 10px; 
 }
-
+/*BOTONES*/
 button {
   width: 40px;
   height:40px;
@@ -55,6 +68,7 @@ button:hover{
 
 }
 
+/*LOGO SOLARIX*/
 .logo{
   display: flex;
   justify-content: center;
@@ -63,14 +77,21 @@ button:hover{
   margin-bottom: 20px;
 }
 
-.logos-sistema {
+#btn-logo{
+  width: 100%;
+  background-image: url("img/logo.jpg");
+  background-size: cover;
+}
 
+/*Logos barra de tareas*/
+.logos-sistema {
   flex-direction: row;
   margin-right: 20px;
   margin-bottom: 20px;
   width: 200px;
   height: 40px;
 }
+
 .btn-logos-sistema{
   text-align: center;
   margin-right: 10px;
@@ -119,16 +140,6 @@ button:hover{
   background-size: cover;
 }
 
-
-
-/*Logo de SOLARIX*/
-#btn-logo{
-  width: 100%;
-  background-image: url("img/logo.jpg");
-  background-size: cover;
-}
-
-
 /*LOGOS DE LA BARRA ICONOS*/
 
 #btn-chrome {
@@ -154,4 +165,109 @@ button:hover{
 #btn-archivos {
   background-image: url("img/archivos.jpg");
   background-size: cover;
+}
+
+/*Menú desplegable*/
+
+.menu-desplegable{
+  width: 400px;
+  height: 400px;
+  background-color: #1d1c1cf7;
+  border-radius: 0% 0% 20% 20%;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+}
+
+.seccion-superior{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seccion-superior div{
+ width:50%;
+ height: 100%;
+}
+
+.seccion-superior{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seccion-superior-usuario{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 3px solid #3c96d7;
+  border-bottom: 3px solid #3c96d7;
+}
+
+.seccion-superior-usuario img{
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.seccion-superior-iconos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 3px solid #3c96d7;
+}
+
+
+.seccion-navegacion{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.seccion-navegacion img{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 10px;
+}
+
+.seccion-navegacion input{
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 5px;
+}
+
+.seccion-aplicaciones{
+  width: 60%;
+  height: 270px;
+  background-color: rgb(219, 219, 219);
+  margin-top: 10px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.seccion-aplicaciones-img{
+  width: 20px;
+  height: 20px;
+}
+
+.seccion-aplicaciones div {
+  color: #000;
+  font-size: 12px;
+  margin-top: 5px;
+  border: 2px solid black;
+  width: 70%;
+  display: flex;
+  justify-content:space-evenly;
+  align-items: center;
 }

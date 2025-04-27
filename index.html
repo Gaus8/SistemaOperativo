@@ -11,15 +11,13 @@
       http-equiv="X-Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
     />
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
     <title>SOLARIX🧨</title>
   </head>
   <body>
     <div class="barra-tareas">
       <div class="logo">
-        <button id="btn-logo">
-
-        </button>
+        <button id="btn-logo"></button>
       </div>
 
       <div class="fecha">
@@ -27,51 +25,84 @@
       </div>
 
       <div class="logos-sistema">
-        <button class="btn-logos-sistema" id="btn-cam">
-
-        </button>
-        <button class="btn-logos-sistema" id="btn-wifi">
-
-        </button>
-        <button class="btn-logos-sistema" id="btn-bateria">
-
-        </button>
-        <button class="btn-logos-sistema" id="btn-speaker">
-
-        </button>
-        <button class="btn-logos-sistema" id="btn-wifi">
-
-        </button>
-        <button class="btn-logos-sistema" id="btn-power">
-
-        </button>
-       
+        <button class="btn-logos-sistema" id="btn-cam"></button>
+        <button class="btn-logos-sistema" id="btn-wifi"></button>
+        <button class="btn-logos-sistema" id="btn-bateria"></button>
+        <button class="btn-logos-sistema" id="btn-speaker"></button>
+        <button class="btn-logos-sistema" id="btn-wifi"></button>
+        <button class="btn-logos-sistema" id="btn-power"></button>
       </div>
-   
     </div>
 
     <div class="barra-iconos">
-      <button id="btn-chrome">
-      </button>
+      <button id="btn-chrome"></button>
 
-      <button id="btn-block">
-      </button>
+      <button id="btn-block"></button>
 
-      <button id="btn-archivos">   
-      </button>
+      <button id="btn-archivos"></button>
 
-      <button id="btn-terminal">  
-      </button>
+      <button id="btn-terminal"></button>
 
-      <button id="btn-calculadora">
-      </button>
+      <button id="btn-calculadora"></button>
     </div>
 
-    <h1>Hello from Electron renderer!</h1>
-    <p>👋</p>
-    <p id="info"></p>
-   
+  <section class="menu-desplegable">
+    <div class="seccion-superior">
+      <div class="seccion-superior-usuario">
+        <img src="img/usuario.jpg" alt="">
+        <h4>USUARIO1</h4>
+      </div>
+      <div class="seccion-superior-iconos">
+        
+      </div>
+    </div>
 
+    <div class="seccion-navegacion">
+      <img src="img/lupa.jpg" alt="lupa">
+      <input type="text" >
+    </div>
+
+    <div class="seccion-aplicaciones">
+      <div>
+        <img src="img/chrome.jpg" alt="" class="seccion-aplicaciones-img">
+        <div class="seccion-aplicaciones-texto">
+          h4
+        </div>  
+      </div>
+      <div>
+        <img src="img/visual.jpg" alt="" class="seccion-aplicaciones-img">
+        <div class="seccion-aplicaciones-texto">
+          <h4></h4>
+          <p></p>
+        </div>
+      </div>
+      <div>
+        <img src="" alt="" class="seccion-aplicaciones-img">
+        <div class="seccion-aplicaciones-texto">
+          <h4></h4>
+          <p></p>
+        </div>
+      </div>
+      <div>
+        <img src="" alt="" class="seccion-aplicaciones-img">
+        <div class="seccion-aplicaciones-texto">
+          <h4></h4>
+          <p></p>
+        </div>
+      </div>
+      <div>
+        <img src="" alt="" class="seccion-aplicaciones-img">
+        <div class="seccion-aplicaciones-texto">
+          <h4></h4>
+          <p></p>
+        </div>
+      </div>
+     
+    </div>
+    <div class="seccion-favoritos">
+
+    </div>
+  </section>
   </body>
-  <script src="./renderer.js" type="module" ></script>
+  <script src="./renderer.js" type="module"></script>
 </html>

@@ -26,5 +26,5 @@ btnTerminal.addEventListener('click', () => {
 
 btnCalc.addEventListener('click', () => {
   window.electron.abrirCalculadora();
-  console.log('Intentando abrir calculadora');
+  console.log('Intentando abrir Calcualadora');
 });
