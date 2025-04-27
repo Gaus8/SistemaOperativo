@@ -170,13 +170,14 @@ button:hover{
 /*Menú desplegable*/
 
 .menu-desplegable{
-  width: 400px;
+  display: none;
+  width: 380px;
   height: 400px;
   background-color: #1d1c1cf7;
-  border-radius: 0% 0% 20% 20%;
+  border-radius: 0% 0% 30% 0%;
   position: absolute;
-  bottom: 50px;
-  left: 0;
+  bottom: 55px;
+  left: 20px;
 }
 
 .seccion-superior{
@@ -222,6 +223,7 @@ button:hover{
 }
 
 
+/*Barra de Busqueda*/
 .seccion-navegacion{
   display: flex;
   justify-content: center;
@@ -245,10 +247,20 @@ button:hover{
   padding: 5px;
 }
 
-.seccion-aplicaciones{
+.seccion-inferior{
+  width: 100%;
+  height: 280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Lista de Aplicaciones*/
+.seccion-aplicaciones-contenedor{
+  margin-bottom: 10px;
   width: 60%;
-  height: 270px;
-  background-color: rgb(219, 219, 219);
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.897);
   margin-top: 10px; 
   display: flex;
   justify-content: center;
@@ -257,17 +269,38 @@ button:hover{
 }
 
 .seccion-aplicaciones-img{
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
 }
+.seccion-aplicaciones-texto {
+  margin-top: 10px;
+  display: block;
+}
+.seccion-aplicaciones-texto h4 {
+  display: block;
+  margin: 0;
+  text-align: start;
+ }
+ .seccion-aplicaciones-texto p {
+  display: block;
+  margin-top: 2px;
+  color: rgb(42, 39, 39);
+ 
+ }
 
-.seccion-aplicaciones div {
+.seccion-aplicaciones{
   color: #000;
   font-size: 12px;
   margin-top: 5px;
-  border: 2px solid black;
+  gap: 10px;
+  height: 40px;
   width: 70%;
   display: flex;
-  justify-content:space-evenly;
   align-items: center;
+}
+
+/*Lista de Favoritos*/
+.seccion-favoritos{
+  width: 40%;
+  height: 100%;
 }
