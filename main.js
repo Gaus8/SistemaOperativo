@@ -54,6 +54,22 @@ app.whenReady().then(() => {
       stdio: "ignore",
     }).unref(); // Ejecuta el archivo sin esperar que termine
   });
+
+  ipcMain.on("abrir-terminal", () => {
+    const rutaTerminal = "C:\\Users\\Asus\\Documents\\SISTEMAS\\CommandPromptPortable\\CommandPromptPortable.exe"; // Ruta al Bloc de Notas Portable
+    spawn(rutaTerminal, {
+      detached: true,
+      stdio: "ignore",
+    }).unref(); // Ejecuta el archivo sin esperar que termine
+  });
+
+  ipcMain.on("abrir-calculadora", () => {
+    const rutaCalculadora = "C:\\Users\\Asus\\Documents\\SISTEMAS\\QalculatePortable\\QalculatePortable.exe"; // Ruta al Bloc de Notas Portable
+    spawn(rutaCalculadora, {
+      detached: true,
+      stdio: "ignore",
+    }).unref(); // Ejecuta el archivo sin esperar que termine
+  });
 });
 
 app.on("window-all-closed", () => {
