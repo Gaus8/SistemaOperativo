@@ -7,5 +7,6 @@ contextBridge.exposeInMainWorld('electron', {
   abrirTerminal: () => ipcRenderer.send('abrir-terminal'),
   abrirCalculadora: () => ipcRenderer.send('abrir-calculadora'),
   apagarSO: () =>ipcRenderer.send('apagar-sistema'),
-  cerrarSO: () =>ipcRenderer.send('cerrar-sesion')
+  cerrarSO: () =>ipcRenderer.send('cerrar-sesion'),
+
 });

@@ -3,6 +3,7 @@ import { formatearTiempo } from "./funciones/fecha.js";
 import { segundos } from "./funciones/fecha.js";
 actualizarHora();
 
+
 //Variables de DOm
 const btnPower = document.getElementById('btn-power');
 const menuApagar = document.querySelector('.menu-apagar');
@@ -11,6 +12,7 @@ const menu = document.querySelector('.menu-desplegable');
 //APAGAR,CERRAR SESION, SUSPENDER
 const btnApagar = document.getElementById('btn-apagar');
 const btnCerrarSesion = document.getElementById('btn-cerrar-sesion')
+
 
 //Variables de iconos
 const btnChrome = document.getElementById('btn-chrome');
@@ -100,3 +102,15 @@ document.getElementById('btn-cam-aceptar').addEventListener('click', () =>{
 document.getElementById('btn-cam-omitir').addEventListener('click', () =>{
   document.querySelector('.menu-cam-timer').style.display = 'none';
 })
+
+function login() {
+
+  const password = document.getElementById('password').value;
+
+
+  if (password === '1234') {   // login exitoso
+    window.electron.sendLoginSuccess(); // proceso que lleva a la pagina principal
+  } else {
+    alert('Contraseña incorrecta');
+  }
+}
