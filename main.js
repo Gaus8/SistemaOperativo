@@ -26,6 +26,11 @@ const createLoginWindow = () => {
 
   loginWindow.loadFile(path.join(__dirname, 'login.html')); // Cargar el archivo HTML para la ventana de login
 
+  loginWindow.once('ready-to-show', () => {
+    loginWindow.maximize(); //Esto es para maximizar la ventana cuando esté lista
+  });
+
+
   loginWindow.on('closed', () => {
     loginWindow = null;
   });
@@ -44,10 +49,12 @@ const createMainWindow = () => {
   });
 
   mainWindow.loadFile(path.join(__dirname, 'index.html')); // Abrir ventana principal al login exitoso
+
+
+mainWindow.once('ready-to-show', () => {
+  mainWindow.maximize(); //Esto es para maximizar la ventana cuando esté lista
+});
 };
-
-
-
 
 
 app.whenReady().then(() => {
