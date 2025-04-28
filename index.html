@@ -121,8 +121,8 @@
         Apagar
       </button>
   </section>
-
   <section class="menu-cam-timer">
+  <div class="menu-cam-timer-contenedor">
     <img class="img-cam" src="img/cam.jpg" alt="">
     <h3>CAM~TIMER</h3>
     <div class="menu-cam-contenedores">
@@ -131,16 +131,17 @@
         <h5>tiempo en pantalla</h5>
       </div>
      <div>
-      <p>12</p>
+      <p id="tiempo-pantalla"></p>
      </div>
     </div>
+
     <div class="menu-cam-contenedores">
       <img src="img/bateria.jpg" alt="">
       <div>
         <h5>bateria restante</h5>
       </div>
       <div>
-        <p>12</p>
+        <p id="bateria-restante">12</p>
        </div>
     </div>
     <div class="menu-cam-contenedores">
@@ -149,7 +150,7 @@
         <h5>juegos abiertos</h5>
       </div>
       <div>
-        <p>2</p>
+        <p>0</p>
        </div>
     </div>
     <div class="menu-cam-contenedores">
@@ -158,7 +159,7 @@
         <h5>pausas realizadas</h5>
       </div>
       <div>
-        <p>12</p>
+        <p>0</p>
        </div>
     </div>
     <div class="menu-cam-contenedores">
@@ -167,27 +168,20 @@
         <h5>tiempo descansado</h5>
       </div>
       <div>
-        <p>12</p>
-       </div>
-    </div>
-    <div class="menu-cam-contenedores">
-      <img src="" alt="">
-      <div>
-        <h5>TIEMPO EN PANTALLA</h5>
-      </div>
-      <div>
-        <p>12</p>
+        <p>hmm</p>
        </div>
     </div>
     <div class="menu-cam-sugerencia">
       <h3> <i>SUGERENCIA</i></h3>
       <img src="img/descanso.jpg" alt="">
+      <p> <i>TOMAR DESCANSO</i></p>
       <div class="menu-cam-botones">
-        <button class="btn-sugerencias" id="btn-cam-aceptar">ACEPTAR</button>
-        <button class="btn-sugerencias" id="btn-cam-omitir">OMITIR</button>
+        <button  id="btn-cam-aceptar">ACEPTAR</button>
+        <button  id="btn-cam-omitir">OMITIR</button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
   </body>
   <script src="./renderer.js" type="module"></script>
 </html>

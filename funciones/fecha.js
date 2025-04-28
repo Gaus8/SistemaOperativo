@@ -11,3 +11,25 @@ export function actualizarHora() {
 }
 
 setInterval(actualizarHora, 1000);
+
+let segundosTranscurridos = 0;
+
+
+function contarSegundos() {
+  segundosTranscurridos++;
+}
+
+
+export function formatearTiempo() {
+  const minutos = Math.floor(segundosTranscurridos / 60);
+  const segundos = segundosTranscurridos % 60;
+
+  return (minutos < 10 ? '0' : '') + minutos + ':' + 
+         (segundos < 10 ? '0' : '') + segundos;
+}
+
+export function segundos (){
+  return segundosTranscurridos;
+}
+setInterval(contarSegundos, 1000);
+

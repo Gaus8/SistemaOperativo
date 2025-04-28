@@ -1,4 +1,5 @@
 import { app, BrowserWindow, ipcMain } from "electron";
+import {powerMonitor } from 'electron';
 import path from "path";
 import { fileURLToPath } from "url";
 import { spawn } from "child_process";
@@ -44,6 +45,10 @@ const createMainWindow = () => {
 
   mainWindow.loadFile(path.join(__dirname, 'index.html')); // Abrir ventana principal al login exitoso
 };
+
+
+
+
 
 app.whenReady().then(() => {
   createLoginWindow();  // Crear la ventana de login

@@ -172,6 +172,10 @@
 }
 
 .menu-cam-timer{
+  display: none;
+}
+.menu-cam-timer-contenedor{
+  display: none;
   padding: 10px;
   position: absolute;
   width: 600px;
@@ -181,9 +185,10 @@
   left: 32%;
   border-radius:30px ;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   flex-direction: column;
+
 }
 
 .img-cam{
@@ -197,7 +202,7 @@
 }
 
 .menu-cam-contenedores{
-  width: 50%;
+  width: 60%;
   height: 40px;
   display: flex;
   justify-content: space-between;
@@ -218,16 +223,50 @@
 }
 
 .menu-cam-sugerencia{
-  
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 50%;
   height: 100px;
+  margin-top: 40px;
 }
 
 .menu-cam-sugerencia img{
   width: 40px;
   height: 40px;
 }
+
+.menu-cam-botones{
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-cam-botones button{
+  padding: 10px;
+  border-radius: 5px;
+  color: #FFF;
+  outline: none;
+  border: none;
+  width: 100px;
+}
+
+
+#btn-cam-aceptar{
+  background-color: rgb(14, 92, 31);
+}
+
+#btn-cam-aceptar:hover{
+  background-color: rgba(14, 92, 31, 0.27);
+}
+
+#btn-cam-omitir{
+  background-color: rgb(255, 98, 0);
+}
+
+#btn-cam-omitir:hover{
+  background-color: rgba(255, 98, 0, 0.362);
+}
+

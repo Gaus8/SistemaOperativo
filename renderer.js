@@ -1,6 +1,8 @@
 import { actualizarHora } from "./funciones/fecha.js";
-
+import { formatearTiempo } from "./funciones/fecha.js";
+import { segundos } from "./funciones/fecha.js";
 actualizarHora();
+
 //Variables de DOm
 const btnPower = document.getElementById('btn-power');
 const menuApagar = document.querySelector('.menu-apagar');
@@ -66,3 +68,35 @@ btnCalc.addEventListener('click', () => {
   console.log('Intentando abrir Calcualadora');
 });
 
+
+document.getElementById('btn-cam').addEventListener('click', async () => {
+  if ( document.querySelector('.menu-cam-timer').style.display === 'block') {
+    document.querySelector('.menu-cam-timer').style.display = 'none';
+  } else {
+    document.querySelector('.menu-cam-timer').style.display = 'block';
+  }
+ 
+  camTimer();
+
+});
+
+setInterval(() => {
+  if (segundos() === 60) {  
+    document.querySelector('.menu-cam-timer').style.display = 'block';
+    camTimer();
+  }
+}, 1000);
+
+async function camTimer (){
+  const battery = await navigator.getBattery();
+  document.getElementById('bateria-restante').textContent = `${(battery.level * 100).toFixed(1)}%`;
+  document.getElementById('tiempo-pantalla').textContent = formatearTiempo();
+}
+
+document.getElementById('btn-cam-aceptar').addEventListener('click', () =>{
+  window.electron.cerrarSO();
+})
+
+document.getElementById('btn-cam-omitir').addEventListener('click', () =>{
+  document.querySelector('.menu-cam-timer').style.display = 'none';
+})
