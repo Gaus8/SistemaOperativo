@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Cargando...</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      background: url('./img/prender.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    video {
+      width: 200px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="./ruta/del/video.mp4" type="video/mp4">
+        Tu navegador no soporta video.
+      </video>
+      <div class="cargando">Cargando...</div>
+
+</body>
+  </html>

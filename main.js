@@ -11,6 +11,32 @@ const __dirname = path.dirname(__filename);
 // Ventanas
 let mainWindow;
 let loginWindow;
+let inicioWindow;
+
+const createInicioWindow = () => {
+  inicioWindow = new BrowserWindow({
+    width: 800,
+    height: 400,
+    frame: false, 
+    alwaysOnTop: true, 
+    transparent: false, 
+    resizable: false,
+    webPreferences: {
+      nodeIntegration: false,
+      contextIsolation: true,
+      preload: path.join(__dirname, 'preload.js')
+    }
+  });
+
+  inicioWindow.loadFile(path.join(__dirname, 'inicio.html'));
+
+  inicioWindow.once('ready-to-show', () => {
+    inicioWindow.maximize(); 
+    inicioWindow.show();
+  });
+};
+
+
 
 // Crear la ventana login
 const createLoginWindow = () => {
@@ -43,7 +69,7 @@ const createMainWindow = () => {
     height: 600,
     webPreferences: {
       nodeIntegration: false, // Desactivar nodeIntegration por seguridad
-      contextIsolation: true, // Aislar el contexto entre renderer y main
+      contextIsolation: true, 
       preload: path.join(__dirname, "preload.js"), // Usar __dirname para cargar preload.js
     },
   });
@@ -56,9 +82,16 @@ mainWindow.once('ready-to-show', () => {
 });
 };
 
-
+// Cuando la aplicación esté lista
 app.whenReady().then(() => {
-  createLoginWindow();  // Crear la ventana de login
+  createInicioWindow();  // Crear la ventana de login
+
+  setTimeout(() => {
+    inicioWindow.close();  // Cierra la ventana de inicio
+    createLoginWindow();   // Crea la ventana de login
+  }, 10000); 
+
+
 
    // Cuando es exitoso el login, envia a la ventana principal
    ipcMain.on('login-success', () => {

@@ -359,3 +359,12 @@ body {
 .btn-menu-apagar:hover{
   background-color: rgba(99, 96, 96, 0.904);
 }
+
+/*Lista de Inicio, logo cargando*/
+.cargando {
+  position: absolute; 
+      top: 90%; 
+      left: 50%; 
+      transform: translate(-50%, -50%); 
+      font-size: 24px; 
+}
