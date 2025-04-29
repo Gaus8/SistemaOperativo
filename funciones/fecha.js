@@ -8,9 +8,6 @@ export function actualizarHora() {
 
   document.getElementById('fecha-sistema').textContent = 
     `${diaNombre}, ${diaNumero} de ${mesNombre} - ${horaCompleta}`;
-
-  document.getElementById('fecha-sistema-h2').textContent = 
-    `${diaNombre}, ${diaNumero} de ${mesNombre} - ${horaCompleta}`;
 }
 
 
