@@ -103,14 +103,3 @@ document.getElementById('btn-cam-omitir').addEventListener('click', () =>{
   document.querySelector('.menu-cam-timer').style.display = 'none';
 })
 
-function login() {
-
-  const password = document.getElementById('password').value;
-
-
-  if (password === '1234') {   // login exitoso
-    window.electron.sendLoginSuccess(); // proceso que lleva a la pagina principal
-  } else {
-    alert('Contraseña incorrecta');
-  }
-}

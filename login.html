@@ -32,9 +32,18 @@
     <h2></h2>
     <div>
       <input type="password" id="password" placeholder="Contraseña">
-      <button onclick="login()">Entrar</button>
+      <button id="btn-login">Entrar</button>
     </div>
   </div>
+  <script type="module" src="./renderer.js"></script>
+  <script type="module">
+    import { login } from './renderer.js';  // Importamos la función
+
+    document.getElementById('btn-login').addEventListener('click', login);
+  </script>
+
+<script type="module" src="./login.js"></script>
+
 </body>
 <script src="./login.js" type="module"></script>
 <script src="./renderer.js" type="module"></script>

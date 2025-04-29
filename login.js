@@ -15,3 +15,18 @@
       // Llama a la función una vez al cargar la página para mostrar la hora inmediatamente
       actualizarHora();
 
+
+//Login 
+function login() {
+  const password = document.getElementById('password').value;
+
+  if (password === '1234') {   // login exitoso
+    window.electron.sendLoginSuccess(); // Llama a Electron para cambiar a index.html
+  } else {
+    alert('Contraseña incorrecta');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('btn-login').addEventListener('click', login);
+});
