@@ -178,11 +178,11 @@
   display: none;
   padding: 10px;
   position: absolute;
-  width: 600px;
-  height: 450px;
+  width: 900px;
+  height: 650px;
   background-color: #1d1c1cf7;
-  top: 20%;
-  left: 32%;
+  top: 10%;
+  left: 20%;
   border-radius:30px ;
   display: flex;
   justify-content: start;
@@ -225,6 +225,7 @@
 .menu-cam-sugerencia{
   display: flex;
   justify-content: center;
+  text-align: center;
   align-items: center;
   flex-direction: column;
   width: 50%;
@@ -234,7 +235,7 @@
 
 .menu-cam-sugerencia img{
   width: 40px;
-  height: 40px;
+  height: 80px;
 }
 
 .menu-cam-botones{
