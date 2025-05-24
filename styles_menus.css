@@ -255,7 +255,7 @@
 }
 
 .menu-cam-videos {
-  margin-top: 90px;
+  margin-top: 74px;
   display: flex;
   justify-content: center;
   gap: 15px;
@@ -263,11 +263,20 @@
 }
 
 .video-sugerencia {
-  width: 200px;
-  height: 120px;
+  width: auto;
+  height: 170px;
   border-radius: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -286,4 +295,7 @@
 #btn-cam-omitir:hover{
   background-color: rgba(255, 98, 0, 0.362);
 }
+
+
+
 

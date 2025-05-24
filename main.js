@@ -36,8 +36,6 @@ const createInicioWindow = () => {
   });
 };
 
-
-
 // Crear la ventana login
 const createLoginWindow = () => {
   loginWindow = new BrowserWindow({
