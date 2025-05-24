@@ -254,6 +254,22 @@
   width: 100px;
 }
 
+.menu-cam-videos {
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.video-sugerencia {
+  width: 200px;
+  height: 120px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+
 
 #btn-cam-aceptar{
   background-color: rgb(14, 92, 31);
