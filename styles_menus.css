@@ -299,6 +299,26 @@
 }
 
 
+.rating input {
+  position:relative;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.rating input::before {
+  content: '\f005';
+  position: absolute;
+  font-family: fontAwesome;
+  font-size: 20px;
+  color: #111;
+  transition: .5s;
+}
 
 
 
