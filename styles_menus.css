@@ -220,6 +220,7 @@
 .menu-cam-contenedores h5{
   margin-right: 20px;
   text-transform: uppercase;
+  align-items: center;
 }
 
 .menu-cam-sugerencia{
@@ -269,10 +270,33 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 }
 
+.container {
+  position: absolute;
+  top: 570px;
+  left: 770px;
+  display: flex;
+  gap: 30px;
+}
 
+.rating {
+  position: relative;
+  display: flex;
+  padding: 15px 20px;
+  border: 3px solid #111;
+  gap: 4px;  
+  border-radius: 20px;
+  background: #353535;
+  box-shadow: none
+}
 
+.rating:nth-child(1) {
+  transform: translateX(-80px);
 
+}
 
+.rating:nth-child(3) {
+  transform: translateX(80px);
+}
 
 
 
