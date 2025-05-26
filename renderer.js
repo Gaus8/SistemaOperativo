@@ -114,5 +114,29 @@ document.getElementById('btn-cam-omitir').addEventListener('click', () =>{
 })
 
 
+const display =document.querySelector(".date-display");
+const btnStart = document.querySelector(".start");
+const btnReset = document.querySelector(".stop");
+const btnStop = document.querySelector(".reset");
+let interval;
+let seconds = 0;
 
 
+btnStart.addEventListener("click", () => {
+    interval = setInterval(() => {
+      seconds++
+      let date= new Date(seconds * 1000);
+      let dateStart = date.toISOString().substr(11, 8);
+      display.textContent = dateStart;
+    }, 1000);
+  })
+
+  btnReset.addEventListener("click", () => {
+    clearInterval(interval);
+  })
+
+  btnStop.addEventListener("click", () => {
+    clearInterval(interval);
+    seconds = 0;
+    display.textContent = "00:00:00";
+  })
