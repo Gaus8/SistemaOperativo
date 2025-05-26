@@ -345,6 +345,29 @@
 }
 
 
+.pausa-texto {
+  position: absolute;
+  top: 413px; 
+  left: 55px;
+  color: #fff;
+  font-size: 16px;  
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.pausa-textoescrito {
+  position: absolute;
+  top: 480px; 
+  left: 54px;
+  color: #fff;
+  font-size: 14px;  
+  text-align: center;
+}
+
+
+
 #btn-cam-aceptar{
   background-color: rgb(14, 92, 31);
 }
