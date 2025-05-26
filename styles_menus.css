@@ -207,6 +207,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
   padding: 0;
   margin: 0;
   gap: 10px;
@@ -328,6 +329,19 @@
 .rating input:checked::before {
   color: var(--c);
 }
+
+
+
+.valoracion-estrellas {
+  position: absolute;
+  top: 510px;
+  left: 709px;
+  color: #fff;
+  font-size: 16px;  
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
 
 #btn-cam-aceptar{
   background-color: rgb(14, 92, 31);
