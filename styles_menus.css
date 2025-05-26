@@ -367,6 +367,32 @@
 }
 
 
+.timer-container{
+  position: absolute;
+  top:300px;
+  right: 0;
+  width: 240px;
+  height: 100px;
+  background-color: rgb(65, 64, 64);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:  column;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.btn {
+  background-color: rgb (255,149,0);
+  width: 70px;
+  height: 30px;
+  border:0;
+  border-radius: 8px;
+}
+
+
+
+
 
 #btn-cam-aceptar{
   background-color: rgb(14, 92, 31);
