@@ -1,0 +1,121 @@
+.menu-cam-timer{
+  display: none;
+}
+
+.menu-cam-timer-contenedor{
+  position: relative;
+  padding: 10px;
+  margin: 100px auto;
+  width: 600px;
+  height: 450px;
+  background-color: #1d1c1cf7;
+  border-radius:30px ;
+  display: flex;
+  justify-content: start;
+  gap: 5px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img-cam{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgb(52, 52, 52);
+  border-radius:50px ;
+  top:4px;
+  left: 4px;
+}
+
+.menu-cam-contenedores{
+  width: 400px;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  gap: 10px;
+}
+
+.cam-container-img{
+  width: 20px;
+}
+
+.cam-container-img img{
+  width: 20px;
+  height: 20px;
+}
+
+.cam-container-titulo {
+  height: 15px;
+  width: 60%;
+  display: flex;             
+  justify-content: center;    
+  align-items: center;      
+}
+
+.cam-container-titulo h5 {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.cam-container-texto{
+  width: 5%;
+}
+
+.menu-cam-sugerencia{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 100px;
+  margin-top: 40px;
+}
+
+.menu-cam-sugerencia img{
+  width: 40px;
+  height: 80px;
+}
+
+.menu-cam-botones{
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-cam-botones button{
+  padding: 10px;
+  border-radius: 5px;
+  color: #FFF;
+  outline: none;
+  border: none;
+  width: 100px;
+}
+
+/*BOTONES*/
+button{
+  cursor: pointer;
+}
+
+#btn-cam-aceptar{
+  background-color: rgb(14, 92, 31);
+}
+
+#btn-cam-aceptar:hover{
+  background-color: rgba(14, 113, 35, 0.526);
+}
+
+#btn-cam-omitir{
+  background-color: rgb(255, 98, 0);
+}
+
+#btn-cam-omitir:hover{
+  background-color: rgba(255, 98, 0, 0.707);
+}

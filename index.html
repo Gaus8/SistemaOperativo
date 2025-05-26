@@ -1,68 +1,71 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="styles_menus.css" />
-    <title>SOLARIX🧨</title>
-  </head>
-  <body>
 
-    <div class="barra-tareas">
-      <div class="logo">
-        <button id="btn-logo"></button>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+  <link rel="stylesheet" href="./assets/fontawesome/css/all.min.css">
 
-      <div class="fecha">
-        <p id="fecha-sistema"></p>
-      </div>
+  <!-- Estilos -->
+  <link rel="stylesheet" href="'styles.css'" />
+  <link rel="stylesheet" href="styles_logos.css" />
+  <link rel="stylesheet" href="styles_main.css" />
+  <link rel="stylesheet" href="styles_menus.css" />
+  <link rel="stylesheet" href="styles_menu_camara.css" />
+  <link rel="stylesheet" href="styles_menu_ejercicio.css" />
 
-      <div class="logos-sistema">
-        <button class="btn-logos-sistema" id="btn-cam"></button>
-        <button class="btn-logos-sistema" id="btn-wifi"></button>
-        <button class="btn-logos-sistema" id="btn-bateria"></button>
-        <button class="btn-logos-sistema" id="btn-speaker"></button>
-        <button class="btn-logos-sistema" id="btn-power"></button>
-      </div>
+  <title>SOLARIX🧨</title>
+</head>
+
+<body>
+
+  <div class="barra-tareas">
+    <div class="logo">
+      <button id="btn-logo"></button>
     </div>
 
-    <div class="barra-iconos">
-      <button class="btn-barra-iconos" id="btn-chrome"></button>
-
-      <button class="btn-barra-iconos" id="btn-block"></button>
-
-      <button class="btn-barra-iconos" id="btn-archivos"></button>
-
-      <button class="btn-barra-iconos"  id="btn-terminal"></button>
-
-      <button class="btn-barra-iconos" id="btn-calculadora"></button>
+    <div class="fecha">
+      <p id="fecha-sistema"></p>
     </div>
+
+    <div class="logos-sistema">
+      <button class="btn-logos-sistema" id="btn-cam"></button>
+      <button class="btn-logos-sistema" id="btn-wifi"></button>
+      <button class="btn-logos-sistema" id="btn-bateria"></button>
+      <button class="btn-logos-sistema" id="btn-speaker"></button>
+      <button class="btn-logos-sistema" id="btn-power"></button>
+    </div>
+  </div>
+
+  <div class="barra-iconos">
+    <button class="btn-barra-iconos" id="btn-chrome"></button>
+
+    <button class="btn-barra-iconos" id="btn-block"></button>
+
+    <button class="btn-barra-iconos" id="btn-archivos"></button>
+
+    <button class="btn-barra-iconos" id="btn-terminal"></button>
+
+    <button class="btn-barra-iconos" id="btn-calculadora"></button>
+  </div>
 
   <section class="menu-desplegable">
-    
+
     <div class="seccion-superior">
       <div class="seccion-superior-usuario">
         <img src="img/usuario.jpg" alt="">
         <h4>USUARIO1</h4>
       </div>
       <div class="seccion-superior-iconos">
-        
+
       </div>
     </div>
 
     <div class="seccion-navegacion">
       <img src="img/lupa.jpg" alt="lupa">
-      <input type="text" >
+      <input type="text">
     </div>
 
     <div class="seccion-inferior">
@@ -73,7 +76,7 @@
           <div class="seccion-aplicaciones-texto">
             <h4>Google Chrome</h4>
             <p>Navegador de Internet</p>
-          </div>  
+          </div>
         </div>
         <div class="seccion-aplicaciones">
           <img src="img/visual.jpg" alt="" class="seccion-aplicaciones-img">
@@ -103,7 +106,7 @@
             <p>Chatea Ahora</p>
           </div>
         </div>
-       
+
       </div>
 
       <div class="seccion-favoritos">
@@ -113,113 +116,133 @@
   </section>
 
   <section class="menu-apagar">
-      <button class="btn-menu-apagar" id="btn-suspender">
-        Suspender
-      </button>
-      <button class="btn-menu-apagar" id="btn-cerrar-sesion">
-        Cerrar Sesion
-      </button>
-       <button class="btn-menu-apagar" id="btn-apagar">
-        Apagar
-      </button>
+    <button class="btn-menu-apagar" id="btn-suspender">
+      Suspender
+    </button>
+    <button class="btn-menu-apagar" id="btn-cerrar-sesion">
+      Cerrar Sesion
+    </button>
+    <button class="btn-menu-apagar" id="btn-apagar">
+      Apagar
+    </button>
   </section>
+
   <section class="menu-cam-timer">
-  <div class="menu-cam-timer-contenedor">
-    <img class="img-cam" src="img/cam.jpg" alt="">
-    <h3>CAM~TIMER</h3>
-    <div class="menu-cam-contenedores">
-      <img src="img/monitor.jpg" alt="">
-      <div>
-        <h5>ㅤㅤㅤtiempo en pantalla</h5>
+    <div class="menu-cam-timer-contenedor">
+      <img class="img-cam" src="img/cam.jpg" alt="">
+      <h3>CAM~TIMER</h3>
+
+      <div class="menu-cam-contenedores">
+        <div class="cam-container-img">
+          <img src="img/monitor.jpg" alt="">
+        </div>
+
+        <div class="cam-container-titulo">
+          <h5>tiempo en pantalla</h5>
+        </div>
+        <div class="cam-container-texto">
+          <p id="tiempo-pantalla"></p>
+        </div>
       </div>
-     <div>
-      <p id="tiempo-pantalla"></p>
-     </div>
+
+      <div class="menu-cam-contenedores">
+        <div class="cam-container-img">
+          <img src="img/bateria.jpg" alt="">
+        </div>
+        <div class="cam-container-titulo">
+          <h5>bateria restante</h5>
+        </div>
+        <div class="cam-container-texto">
+          <p id="bateria-restante">12</p>
+        </div>
+      </div>
+
+      <div class="menu-cam-contenedores">
+        <div class="cam-container-img">
+          <img src="img/game.jpg" alt="">
+        </div>
+        <div class="cam-container-titulo">
+          <h5>juegos abiertos</h5>
+        </div>
+        <div class="cam-container-texto">
+          <p>0</p>
+        </div>
+      </div>
+
+      <div class="menu-cam-contenedores">
+        <div class="cam-container-img">
+          <img src="img/pause.jpg" alt="">
+        </div>
+        <div class="cam-container-titulo">
+          <h5>pausas realizadas</h5>
+        </div>
+        <div class="cam-container-texto">
+          <p>0</p>
+        </div>
+      </div>
+
+      <div class="menu-cam-contenedores">
+        <div class="cam-container-img">
+          <img src="img/clock.jpg" alt="">
+        </div>
+        <div class="cam-container-titulo">
+          <h5>tiempo descansado</h5>
+        </div>
+        <div class="cam-container-texto">
+          <p>hmm</p>
+        </div>
+      </div>
+
+      <div class="menu-cam-sugerencia">
+        <h3> <i>SUGERENCIA</i></h3>
+        <img src="img/descanso.jpg" alt="">
+        <p> <i>TOMAR DESCANSO<br>REALIZANDO PAUSAS ACTIVAS<br></i></p>
+        <div class="menu-cam-botones">
+          <button id="btn-cam-aceptar">ACEPTAR</button>
+          <button id="btn-cam-omitir">OMITIR</button>
+        </div>
+      </div>
+
     </div>
 
-    <div class="menu-cam-contenedores">
-      <img src="img/bateria.jpg" alt="">
-      <div>
-        <h5>ㅤㅤㅤbateria restante</h5>
-      </div>
-      <div>
-        <p id="bateria-restante">12</p>
-       </div>
-    </div>
-    <div class="menu-cam-contenedores">
-      <img src="img/game.jpg" alt="">
-      <div>
-        <h5>ㅤjuegos abiertos</h5>
-      </div>
-      <div>
-        <p>0</p>
-       </div>
-    </div>
-    <div class="menu-cam-contenedores">
-      <img src="img/pause.jpg" alt="">
-      <div>
-        <h5>ㅤpausas realizadas</h5>
-      </div>
-      <div>
-        <p>0</p>
-       </div>
-    </div>
-    <div class="menu-cam-contenedores">
-      <img src="img/clock.jpg" alt="">
-      <div>
-        <h5>ㅤㅤㅤtiempo descansado</h5>
-      </div>
-      <div>
-        <p>hmm</p>
-       </div>
-    </div>
-    
-    <div class="menu-cam-sugerencia">
-      <h3> <i>SUGERENCIA</i></h3>
-      <img src="img/descanso.jpg" alt="">
-      <p> <i>TOMAR DESCANSO<br>REALIZANDO PAUSAS ACTIVAS<br></i></p>
-      <div class="menu-cam-botones">
-        <button  id="btn-cam-aceptar">REALIZADO</button>
-        <button  id="btn-cam-omitir">OMITIR</button>
-      </div>
-    </div>
+  </section>
 
-    
+  <section class="menu-ejercicio">
+
     <p class="valoracion-estrellas">VALORACIÓN DEL <br>SERVICIO</br> </p>
 
+    <div class="ejercicio-texto">
+      <div class="pausa-texto">
+        <p> RECOMENDACIONES<br>PAUSA ACTIVA</br></p>
+      </div>
 
-    <div class="pausa-texto">
-      <p> RECOMENDACIONES<br>PAUSA ACTIVA</br></p>
+      <div class="pausa-textoescrito">
+        <p> 💪 → Movilidad articular</p>
+        <p> 🫁 → Respiración</p>
+        <p> 💧 → Beber agua</p>
+        <p> 🪟 → Mirar por la ventana</p>
+        <p> 🚶 → Caminar</p>
+      </div>
     </div>
-
-    <div class="pausa-textoescrito">
-      <p> 💪 → Movilidad articular</p>
-      <p> 🫁 → Respiración</p>
-      <p> 💧 → Beber agua</p>
-      <p> 🪟 → Mirar por la ventana</p>
-      <p> 🚶 → Caminar</p>
-
-    </div>
-
 
 
     <div class="menu-cam-videos">
-    <video class="video-sugerencia" controls>
-      <source src="video/pausa_cuello.mp4" type="video/mp4">
-      Tu navegador no soporta video HTML5.
-    </video>
-    <video class="video-sugerencia" controls>
-      <source src="video/pausa_pierna.mp4" type="video/mp4">
-      Tu navegador no soporta video HTML5.
-    </video>
-    <video class="video-sugerencia" controls>
-      <source src="video/pausa_espalda.mp4" type="video/mp4">
-      Tu navegador no soporta video HTML5.
-    </video>
-  </div>
+      <video class="video-sugerencia" controls>
+        <source src="video/pausa_cuello.mp4" type="video/mp4">
+        Tu navegador no soporta video HTML5.
+      </video>
+      <video class="video-sugerencia" controls>
+        <source src="video/pausa_pierna.mp4" type="video/mp4">
+        Tu navegador no soporta video HTML5.
+      </video>
+      <video class="video-sugerencia" controls>
+        <source src="video/pausa_espalda.mp4" type="video/mp4">
+        Tu navegador no soporta video HTML5.
+      </video>
+    </div>
 
 
-  <div class="container">
+    <div class="container">
       <div class="rating">
         <input type="radio" name="clr3" style="--c:#2ae418">
         <input type="radio" name="clr3" style="--c:#2ae418">
@@ -229,20 +252,21 @@
       </div>
     </div>
 
-  
 
-  <div class="timer-container">
+
+    <div class="timer-container">
       <div class="date-display">00:00:00</div>
       <div class="timer">
         <button class="btn start">Iniciar</button>
         <button class="btn stop">Detener</button>
         <button class="btn reset">Reiniciar</button>
       </div>
-      </div>
+    </div>
 
 
-  </div>
-</section>
-  </body>
-  <script src="./renderer.js" type="module"></script>
+  </section>
+
+</body>
+<script src="./renderer.js" type="module"></script>
+
 </html>
