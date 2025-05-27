@@ -1,133 +1,66 @@
 .menu-ejercicio{
-/* display: none; */
-  position: relative;
-  display: flex;
-  justify-content: center;
-  background-color: #1d1c1cf7;
-  width: 60%;
-  height: 600px;
-  margin: 50px auto;
+    display: none;
 }
 
-.ejercicio-texto{
-  margin: auto;
-  width: 20%;
-  border: 2px solid wheat;
+.menu-ejercicio-container{
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1d1c1cf7;
+  width: 45%;
+  height: 600px;
+  margin: 50px auto;
+  border-radius: 10px;
 }
+
+/*Texto*/
+.ejercicio-contenedor{
+  margin: 0;
+  padding: 0;
+  margin-top: 20px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.pausa-texto {
+  color: #fff;
+  font-size: 20px;  
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pausa-textoescrito {
+  color: #fff;
+  font-size: 16px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-weight: bold;
+}
+
+.pausa-textoescrito p {
+  border-right: 2px solid wheat;
+}
+
+/* Video */
 .menu-cam-videos {
-  margin-top: 74px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
 }
 
-.video-sugerencia {
-  width: auto;
-  height: 170px;
-  border-radius: 10px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
-}
-
-.container {
-  position: absolute;
-  top: 570px;
-  left: 770px;
-  display: flex;
-  gap: 30px;
-}
-
-.rating {
-  --c:gold;
-  position: relative;
-  display: flex;
-  flex-direction: row-reverse;
-  padding: 15px 20px;
-  border: 3px solid #111;
-  gap: 4px;  
-  border-radius: 20px;
-  background: #353535;
-  box-shadow: none
-}
-
-.rating:nth-child(1) {
-  transform: translateX(-80px);
-
-}
-
-.rating:nth-child(3) {
-  transform: translateX(80px);
-}
-
-
-.rating input {
-  position:relative;
-  width: 15px;
-  height: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  appearance: none;
-  -webkit-appearance: none;
-}
-
-.rating input::before {
-  content: '\f005';
-  position: absolute;
-  font-family: fontAwesome;
-  font-size: 20px;
-  color: #111;
-  transition: .5s;
-}
-
-.rating input:hover ~ input::before,
-.rating input:hover::before,
-.rating input:checked ~ input::before,
-.rating input:checked::before {
-  color: var(--c);
-}
-
-
-
-.valoracion-estrellas {
-  position: absolute;
-  top: 510px;
-  left: 705px;
-  color: #fff;
-  font-size: 16px;  
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  text-align: center;
-}
-
-
-.pausa-texto {
-  position: absolute;
-  top: 413px; 
-  left: 55px;
-  color: #fff;
-  font-size: 16px;  
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  text-align: center;
-}
-
-
-.pausa-textoescrito {
-  position: absolute;
-  top: 480px; 
-  left: 54px;
-  color: #fff;
-  font-size: 14px;  
-  text-align: center;
-}
-
-
+/* Cronometro */
 .timer-container{
-  position: absolute;
-  top:300px;
-  right: 0;
+  margin-top: 10px;
   width: 190px;
   height: 40px;
   background: #353535;
@@ -139,7 +72,6 @@
   border-radius: 20px;
   padding: 20px; 
 }
-
 .btn {
   background-color: rgb(255,149,0);
   width: 60px;
@@ -160,6 +92,75 @@
 }
 
 
+/*Videos*/
+.video-sugerencia {
+  width: auto;
+  height: 170px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Estrellas */
+.container-estrellas{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating {
+  --c:gold;
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 15px 20px;
+  border: 3px solid #111;
+  gap: 4px;  
+  border-radius: 20px;
+  background: #353535;
+  box-shadow: none;
+  margin-right: 20px;
+}
+
+.rating input {
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.rating input::before {
+  content: '\f005';
+  font-family: fontAwesome;
+  font-size: 20px;
+  color: #111;
+  transition: .5s;
+}
+
+.rating input:hover ~ input::before,
+.rating input:hover::before,
+.rating input:checked ~ input::before,
+.rating input:checked::before {
+  color: var(--c);
+}
+
+/* Boton */
+#btn-cerrar-ejercicios{
+  padding: 10px 15px;
+  color: #FFF;
+  border-radius: 5px;
+  background-color: red;
+  outline: none;
+  border: none;
+  margin-top: 10px;
+}
+
+#btn-cerrar-ejercicios:hover{
+  background-color: rgba(255, 0, 0, 0.682);
+}
 
 
 
