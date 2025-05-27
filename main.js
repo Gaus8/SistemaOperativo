@@ -113,7 +113,9 @@ app.whenReady().then(() => {
   });
 
   ipcMain.on("abrir-block", () => {
-    const rutaBlockNotas = "C:\\Users\\Asus\\Documents\\SISTEMAS\\Notepad\\notepad++.exe"; // Ruta al Bloc de Notas Portable
+      const rutaBlockNotas = path.join(__dirname, "sistemas", "Notepad", "notepad++.exe").
+      replace(/\\/g, "\\\\");
+
     spawn(rutaBlockNotas, {
       detached: true,
       stdio: "ignore",
@@ -122,7 +124,9 @@ app.whenReady().then(() => {
 
 
   ipcMain.on("abrir-terminal", () => {
-    const rutaTerminal = "C:\\Users\\Asus\\Documents\\SISTEMAS\\CommandPromptPortable\\CommandPromptPortable.exe"; // Ruta al Bloc de Notas Portable
+    const rutaTerminal = path.join(__dirname, "sistemas", "CommandPromptPortable", "CommandPromptPortable.exe").
+    replace(/\\/g, "\\\\") // Ruta al Bloc de Notas Portable
+
     spawn(rutaTerminal, {
       detached: true,
       stdio: "ignore",
@@ -130,7 +134,8 @@ app.whenReady().then(() => {
   });
 
   ipcMain.on("abrir-calculadora", () => {
-    const rutaCalculadora = "C:\\Users\\Asus\\Documents\\SISTEMAS\\QalculatePortable\\QalculatePortable.exe"; // Ruta al Bloc de Notas Portable
+    const rutaCalculadora = path.join(__dirname, "sistemas", "QalculatePortable", "QalculatePortable.exe").
+     replace(/\\/g, "\\\\") // Ruta al Bloc de Notas Portable
     spawn(rutaCalculadora, {
       detached: true,
       stdio: "ignore",
